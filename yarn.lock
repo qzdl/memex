@@ -14450,10 +14450,23 @@ supports-hyperlinks@^2.0.0:
     has-flag "^4.0.0"
     supports-color "^7.0.0"
 
+svg-path-parser@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/svg-path-parser/-/svg-path-parser-1.1.0.tgz#e16b4b39df0d2b0d39e8347db79fdda1453a6046"
+  integrity sha1-4WtLOd8NKw056DR9t5/doUU6YEY=
+
 svg-tags@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
+
+svg2marker@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/svg2marker/-/svg2marker-0.1.3.tgz#03c4f47be9ce9c1d3968e8d9835f43b27811ed92"
+  integrity sha512-AetOg608n5bbmHvmZMvzpWRuinrbkK5GPoScnWGtBTvYXJsagaskao2TWxg/QVcEL9wwds32ThxPQ1Q1g6YoqQ==
+  dependencies:
+    lodash "^4.17.11"
+    svg-path-parser "^1.1.0"
 
 svgo@^1.0.0:
   version "1.3.2"
