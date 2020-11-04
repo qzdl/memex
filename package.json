@@ -281,6 +281,7 @@
     "cors": "^2.8.5",
     "draft-convert": "^2.1.10",
     "draft-js": "^0.11.6",
+    "elasticlunr": "^0.9.5",
     "electron-debug": "^3.1.0",
     "electron-log": "^4.2.2",
     "electron-updater": "^4.3.1",

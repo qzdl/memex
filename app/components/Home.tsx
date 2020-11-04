@@ -12,7 +12,9 @@ import OperatorBar from './Core/OperatorBar';
 import './Layout/index.css';
 import { TreeGraphReact } from './Core/Graph';
 import Graphin, { Utils } from '../packages/graphin/src';
+
 import Notes from './Core/Notes';
+import Search from './Core/Search';
 import Inbox from './Core/Inbox';
 import TagManagement from './Core/TagManagement';
 
@@ -152,6 +154,8 @@ export class Home extends React.Component {
 
     inboxItems.rows.forEach((row, index1) => {
       if (row.doc.committed) {
+        console.log('committed: ', row.doc);
+
         const { hostname } = new URL(row.doc.url);
         let totalClickAndMouseOver = 0;
         for (const element in row.doc.behaviour.elements) {
@@ -196,8 +200,9 @@ export class Home extends React.Component {
       }
     });
 
+    console.log('dependencies: ', dependencies)
     for (const node of dependencies.nodes) {
-      // console.log('node', node)
+      console.log('node', node)
       node.data.children.forEach((child, idx) => {
         // console.log(pushedNodeIds[node.id], pushedNodeIds['document_' + child.id])
         if (pushedNodeIds[node.id] && pushedNodeIds[`document_${child.id}`]) {
@@ -304,6 +309,9 @@ export class Home extends React.Component {
     }
     if (layout.page === 'tag_management') {
       return <TagManagement />;
+    }
+    if (layout.page === 'search') {
+      return <Search />;
     }
     return null;
   }

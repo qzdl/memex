@@ -49,6 +49,14 @@ const OperatorBar: React.FC<OperatorBarProps> = () => {
       id: 'search',
       name: 'Search',
       icon: <SearchOutlined />,
+      onClick: () => {
+        dispatch({
+          type: 'CHANGE_PAGE',
+          payload: {
+            page: 'search',
+          },
+        });
+      },
     },
     {
       id: 'divider1',
